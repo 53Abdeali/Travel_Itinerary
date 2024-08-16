@@ -1,0 +1,46 @@
+/* Main Loader Container */
+.welcome-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white; /* Change to fit your design */
+  }
+  
+  /* Text Styling */
+  .welcome-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: darkgreen;
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+  
+  /* Underline Animation */
+  .underline {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: goldenrod;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    animation: underlineAnimation 2s infinite;
+  }
+  
+  /* Underline Animation Keyframes */
+  @keyframes underlineAnimation {
+    0% {
+      width: 0;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
