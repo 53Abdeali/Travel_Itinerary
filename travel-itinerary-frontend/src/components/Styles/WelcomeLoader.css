@@ -5,13 +5,16 @@
     justify-content: center;
     height: 100vh;
     background-color: white; /* Change to fit your design */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
   }
   
   /* Text Styling */
   .welcome-text {
     font-size: 48px;
     font-weight: bold;
-    color: darkgreen;
+    color: #3a5a40;
     position: relative;
     transition: 0.5s ease-in-out;
   }

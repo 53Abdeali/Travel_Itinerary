@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import AppNavbar from './components/AppNavbar';
 import WelcomeLoader from './components/WelcomeLoader';
+import All from './components/All';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
       {loading ? (
         <WelcomeLoader onComplete= {handleLoaderComplete} />
       ) : (
-        <AppNavbar/>
+        <All/>
       )}
     </div>
   );
