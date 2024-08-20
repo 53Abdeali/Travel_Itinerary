@@ -1,24 +1,40 @@
-import React from 'react'
-import AppNavbar from './AppNavbar';
-import Community from './Community';
-import Features from './Features';
-import Hero from './Hero';
-import Testimonials from './Testimonials';
-import Feedback from './Feedback';
-import Footer from './Footer'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AppNavbar from "./AppNavbar";
+import Hero from "./Hero";
+import Community from "./Community";
+import Features from "./Features";
+import Testimonials from "./Testimonials";
+import Feedback from "./Feedback";
+import Footer from "./Footer";
+import AboutUs from "../About_Page/AboutUs";
+
+function Home() {
+  return (
+    <div>
+      <Hero />
+      <Community />
+      <Features />
+      <Testimonials />
+      <Feedback />
+      <Footer />
+    </div>
+  );
+}
 
 function All() {
   return (
-    <div>
-        <AppNavbar/>
-        <Hero/>
-        <Community/>
-        <Features/>
-        <Testimonials/> 
-        <Feedback/>
-        <Footer/> 
-    </div>
-  )
+    <Router>
+      <div>
+        <AppNavbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
+  );
 }
 
-export default All
+export default All;

@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import './Styles/AppNavbar.css'
 import {GiHamburgerMenu} from 'react-icons/gi'
+import { useNavigate } from 'react-router-dom'
 
 function AppNavbar() {
   const [showMediaIcon, setShowMediaIcon] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleAboutClick = (event) => {
+    event.preventDefault(); 
+    navigate('/about'); 
+  };
+
   return (
     <nav className="main-nav">
       <div className="logo">
@@ -16,7 +25,7 @@ function AppNavbar() {
         <li><a href="/" className="navbar-link">Home</a></li>
         <li><a href="/explore" className="navbar-link">Explore Destinations</a></li>
         <li><a href="/journey" className="navbar-link">Plan a Journey</a></li>
-        <li><a href="/about" className="navbar-link">About Us</a></li>
+        <li><a href="/about" onClick={handleAboutClick} className="navbar-link">About Us</a></li>
         <li><a href="/contact" className="navbar-link">Contact Us</a></li>
         </ul>
       </div>
@@ -26,7 +35,7 @@ function AppNavbar() {
           <li><a href="/login" className="navbar-login-link">Login/Register</a></li>
         </ul>
         <div className='hamburger-menu'>
-              <a href='/#' onClick={() => setShowMediaIcon(!showMediaIcon)}>
+              <a href='/#' onClick={(e) => { e.preventDefault(); setShowMediaIcon(!showMediaIcon)}}>
                 <GiHamburgerMenu style = {{color:'darkgreen'}}/>
               </a>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "./Styles/Features.css";
-import {IoMdArrowRoundForward} from 'react-icons/io'
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,10 +21,23 @@ import slide_image_7 from "./Images/Galiyakot_Mazar.webp";
 import slide_image_8 from "./Images/Ujjian_Mazar.jpg";
 
 function Features() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  useEffect(() => {
+    console.log('isVisible changed:', isVisible);
+  }, [isVisible]);
+
   return (
     <div className="main">
       <div className="feature-heading">
-        <h1>Tailored for the Dawoodi Bohra Community</h1>
+        <h1 className={`fadeInRight ${isVisible ? "visible" : ""}`}>
+          Tailored for the Dawoodi Bohra Community
+        </h1>
         <div className="container">
           <div className="para">
             <h2>Overview</h2>
@@ -105,7 +119,7 @@ function Features() {
       </div>
 
       <div className="question">
-        <div className="Problem">
+        <div className={`Problem ${isVisible ? "rotateDownRight" : ""}`}>
           <h3>Problem faced by Zaereen</h3>
           <p>
             When Dawoodi Bohra Zaereen embark on pilgrimages, they often focus
@@ -123,7 +137,7 @@ function Features() {
 
         <div className="Line"></div>
 
-        <div className="Solution">
+        <div className={`Solution ${isVisible ? "rotateDownLeft" : ""}`}>
           <h3>Solution To Zaereen</h3>
           <p>
             The Dawoodi Bohra Travel Itinerary project aims to bridge this gap
@@ -140,39 +154,59 @@ function Features() {
           </p>
         </div>
       </div>
-      <div className="features">
+      <div className={`features ${isVisible ? "fadeInDown" : ""}`}>
         <h3>Features</h3>
         <ul>
           <li>
-            <IoMdArrowRoundForward style={{color:'#3a5a40', fontSize:'2rem'}}/><h3>Religious Site Locator:</h3><br/>{" "}
+            <IoMdArrowRoundForward
+              style={{ color: "#3a5a40", fontSize: "2rem" }}
+            />
+            <h3>Religious Site Locator:</h3>
+            <br />{" "}
             <span>
               Easily find and plan visits to significant religious sites such as
               the Mazars and mosques.
             </span>
           </li>
           <li>
-          <IoMdArrowRoundForward style={{color:'#3a5a40', fontSize:'2rem'}}/><h3>Community Centers:</h3><br/>{" "}
+            <IoMdArrowRoundForward
+              style={{ color: "#3a5a40", fontSize: "2rem" }}
+            />
+            <h3>Community Centers:</h3>
+            <br />{" "}
             <span>
               Information on community centers where you can connect with local
               Dawoodi Bohra members during your travels.
             </span>
           </li>
           <li>
-          <IoMdArrowRoundForward style={{color:'#3a5a40', fontSize:'2rem'}}/><h3>Event Notifications:</h3><br/>
+            <IoMdArrowRoundForward
+              style={{ color: "#3a5a40", fontSize: "2rem" }}
+            />
+            <h3>Event Notifications:</h3>
+            <br />
             <span>
               Stay informed about community events happening in the destinations
               you're visiting.
             </span>
           </li>
           <li>
-          <IoMdArrowRoundForward style={{color:'#3a5a40', fontSize:'2rem'}}/><h3>Huzurala TUS Update:</h3><br/>{" "}
+            <IoMdArrowRoundForward
+              style={{ color: "#3a5a40", fontSize: "2rem" }}
+            />
+            <h3>Huzurala TUS Update:</h3>
+            <br />{" "}
             <span>
               Get the latest and real time updates on Asfar Mubaraka of Aqa
               Maula TUS.
             </span>
           </li>
           <li>
-          <IoMdArrowRoundForward style={{color:'#3a5a40', fontSize:'2rem'}}/><h3>ITS Data Drive Ziyarat Auto Update:</h3><br/>{" "}
+            <IoMdArrowRoundForward
+              style={{ color: "#3a5a40", fontSize: "2rem" }}
+            />
+            <h3>ITS Data Drive Ziyarat Auto Update:</h3>
+            <br />{" "}
             <span>
               When a Journey is planned and all tickets, fare payment is done
               then on the time of arrival to the Mazar Mubaraka data will be

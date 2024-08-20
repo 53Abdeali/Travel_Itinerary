@@ -16,6 +16,11 @@
 	.ezy__footer3 {
 		padding: 40px 0;
 	}
+	h5{
+		font-size: 2rem;
+		color: goldenrod;
+		font-weight: 800;
+	}
 }
 
 /* Gray Block Style */
@@ -54,11 +59,13 @@
 .ezy__footer3-quick-links li {
 	margin-bottom: 8px;
 }
+
 h5{
     font-size: 2rem;
     color: goldenrod;
     font-weight: 800;
 }
+
 .ezy__footer3-quick-links li a {
 	color: var(--bs-body-color);
 	/* opacity: 0.7; */
