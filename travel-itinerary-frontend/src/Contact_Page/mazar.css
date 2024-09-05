@@ -1,0 +1,106 @@
+.mazar-cards{
+    background-color: #fff;
+    border: 2px solid #3a5a40;
+    border-radius: 50px;
+  }
+
+.mazar-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.contact-details h3{
+    padding-top: 15px;
+    font-size: 2rem;
+    color: #3a5a40;
+    text-transform: uppercase;
+}
+
+.contact-details .cont-para{
+    color: #3a5a40;
+    font-size: 1.8rem;
+    padding-top: 6px;
+}
+
+.contact-details .cont-para1{
+    color: #3a5a40;
+    font-size: 1.3rem;
+    padding-top: 6px;
+}
+
+.mazar-info, .contact-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    height: 220px;
+    padding-top: 20px;
+}
+
+.pentagon {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    overflow: hidden;
+    margin: 0 auto 10px;   
+}
+
+.pentagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 2rem;
+    padding: 20px;
+  }
+
+.contact-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.buttons1 {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.button1 button {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid goldenrod;
+    border-radius: 25px;
+    background-color: #3a5a40;
+}
+
+.buttons1 button{
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background-color: #3a5a40;
+}

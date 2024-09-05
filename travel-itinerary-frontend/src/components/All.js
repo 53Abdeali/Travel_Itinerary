@@ -8,6 +8,7 @@ import Testimonials from "./Testimonials";
 import Feedback from "./Feedback";
 import Footer from "./Footer";
 import AboutUs from "../About_Page/AboutUs";
+import ContactUs from "../Contact_Page/ContactUs";
 
 function Home() {
   return (
@@ -17,7 +18,6 @@ function Home() {
       <Features />
       <Testimonials />
       <Feedback />
-      <Footer />
     </div>
   );
 }
@@ -30,6 +30,7 @@ function All() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />}/>
         </Routes>
         <Footer/>
       </div>

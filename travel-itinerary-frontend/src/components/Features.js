@@ -32,13 +32,35 @@ function Features() {
     console.log('isVisible changed:', isVisible);
   }, [isVisible]);
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <div className="main">
-      <div className="feature-heading">
+      <div className="feature-heading animate-on-scroll">
         <h1 className={`fadeInRight ${isVisible ? "visible" : ""}`}>
           Tailored for the Dawoodi Bohra Community
         </h1>
-        <div className="container">
+        <div className="container animate-on-scroll">
           <div className="para">
             <h2>Overview</h2>
             <p>
@@ -67,7 +89,7 @@ function Features() {
               significance to the community.
             </p>
           </div>
-          <div className="new-swiper">
+          <div className="new-swiper animate-on-scroll">
             <h2>Mazar Gallery</h2>
             <Swiper
               effect={"coverflow"}
@@ -118,7 +140,7 @@ function Features() {
         </div>
       </div>
 
-      <div className="question">
+      <div className="question animate-on-scroll">
         <div className={`Problem ${isVisible ? "rotateDownRight" : ""}`}>
           <h3>Problem faced by Zaereen</h3>
           <p>
@@ -157,7 +179,7 @@ function Features() {
       <div className={`features ${isVisible ? "fadeInDown" : ""}`}>
         <h3>Features</h3>
         <ul>
-          <li>
+          <li className="animate-on-scroll">
             <IoMdArrowRoundForward
               style={{ color: "#3a5a40", fontSize: "2rem" }}
             />
@@ -168,7 +190,7 @@ function Features() {
               the Mazars and mosques.
             </span>
           </li>
-          <li>
+          <li className="animate-on-scroll">
             <IoMdArrowRoundForward
               style={{ color: "#3a5a40", fontSize: "2rem" }}
             />
@@ -179,7 +201,7 @@ function Features() {
               Dawoodi Bohra members during your travels.
             </span>
           </li>
-          <li>
+          <li className="animate-on-scroll">
             <IoMdArrowRoundForward
               style={{ color: "#3a5a40", fontSize: "2rem" }}
             />
@@ -190,7 +212,7 @@ function Features() {
               you're visiting.
             </span>
           </li>
-          <li>
+          <li className="animate-on-scroll">
             <IoMdArrowRoundForward
               style={{ color: "#3a5a40", fontSize: "2rem" }}
             />
@@ -201,7 +223,7 @@ function Features() {
               Maula TUS.
             </span>
           </li>
-          <li>
+          <li className="animate-on-scroll">
             <IoMdArrowRoundForward
               style={{ color: "#3a5a40", fontSize: "2rem" }}
             />

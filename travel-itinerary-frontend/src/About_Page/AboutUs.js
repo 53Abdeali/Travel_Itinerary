@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./About.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,27 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 function AboutUs() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
   const teamMembers = [
     {
       picture: "",
@@ -98,7 +119,9 @@ function AboutUs() {
         />
       </div>
       <div className="ezy__team3-content">
-        <h4 style={{fontSize:'2rem'}} className="mb-2">{member.fullName}</h4>
+        <h4 style={{ fontSize: "2rem" }} className="mb-2">
+          {member.fullName}
+        </h4>
         <h6>{member.designation}</h6>
         <p className="opacity-50 mb-0">{member.bio}</p>
         <div className="ezy__team3-social-links mt-4">
@@ -119,19 +142,19 @@ function AboutUs() {
   return (
     <div className="about-main">
       <div className="welcome">
-        <h1>Welcome To Dawoodi Bohra Itinerary</h1>
-        <p>
+        <h1 className="animate-on-scroll">Welcome To Dawoodi Bohra Itinerary</h1>
+        <p className="animate-on-scroll">
           Dive into the vibrant world of the Dawoodi Bohra community. Connect
           with us, explore our rich heritage, and make your journey
           unforgettable. We are excited to have you here!
         </p>
       </div>
       <div className="about-us">
-        <div className="about-question">
+        <div className="about-question animat-on-scroll">
           <h1>ABOUT US</h1>
-          <div className="para1">
-            <h2>What is Dawoodi Bohra Itinerary?</h2>
-            <p>
+          <div className="para1 animate-on-scroll">
+            <h2 className="animate-on-scroll">What is Dawoodi Bohra Itinerary?</h2>
+            <p className="animate-on-scroll">
               A Dawoodi Bohra itinerary is thoughtfully designed to focus on
               spiritual enrichment and community bonding. It often includes
               visits to significant masjids, shrines of revered saints, and
@@ -144,8 +167,8 @@ function AboutUs() {
             </p>
           </div>
           <div>
-            <h2>What is the mission and objective of the platform?</h2>
-            <p>
+            <h2 className="animate-on-scroll">What is the mission and objective of the platform?</h2>
+            <p className="animate-on-scroll">
               The Dawoodi Bohra Travel Itinerary project aims to bridge the gap
               by offering a platform that not only helps Zaereen plan their
               visits to major pilgrimage sites but also guides them to smaller,
@@ -160,34 +183,34 @@ function AboutUs() {
             </p>
           </div>
           <div>
-            <h2>What are the functionalities of this platform?</h2>
+            <h2 className="animate-on-scroll">What are the features of this platform?</h2>
             <ul>
-              <li>Personalized Itinerary Planning:</li>
-              <p>
+              <li className="animate-on-scroll"  >Personalized Itinerary Planning:</li>
+              <p className="animate-on-scroll">
                 Users can create custom travel itineraries tailored to Dawoodi
                 Bohra religious and cultural sites, ensuring visits to important
                 masjids, shrines, and historical landmarks.
               </p>
-              <li>Explore nearby Places:</li>
-              <p>
+              <li className="animate-on-scroll">Explore nearby Places:</li>
+              <p className="animate-on-scroll">
                 A feature that allows users to discover nearby religious and
                 cultural destinations, making it easy to include them in their
                 travel plans.
               </p>
-              <li>Secure Login and Registration:</li>
-              <p>
+              <li className="animate-on-scroll">Secure Login and Registration:</li>
+              <p className="animate-on-scroll">
                 Secure access to personalized features, including saved
                 itineraries and booking history, using the ITS 52 API for
                 authentication.
               </p>
-              <li>Destination Information:</li>
-              <p>
+              <li className="animate-on-scroll">Destination Information:</li>
+              <p className="animate-on-scroll">
                 Detailed information about each destination, including
                 historical significance, prayer timings, and available
                 amenities, ensuring users are well-informed.
               </p>
-              <li>Feedback Submission:</li>
-              <p>
+              <li className="animate-on-scroll">Feedback Submission:</li>
+              <p className="animate-on-scroll">
                 A feedback mechanism where users can share their travel
                 experiences and suggestions to help improve the platform and
                 assist other travelers.
@@ -196,15 +219,15 @@ function AboutUs() {
           </div>
         </div>
         <div className="back-images">
-          <div className="box-image1"></div>
-          <div className="box-image2"></div>
+          <div className="box-image1 animate-on-scroll"></div>
+          <div className="box-image2 animate-on-scroll"></div>
         </div>
       </div>
       <div className="our-story">
-        <div className="story">
-          <h1>OUR STORY</h1>
-          <div className="story-para">
-            <p>
+        <div className="story animate-on-scroll">
+          <h1 className="animate-on-scroll">OUR STORY</h1>
+          <div className="story-para animate-on-scroll">
+            <p className="animate-on-scroll">
               Discover the purpose behind our platform: a seamless blend of
               tradition and modern convenience. Learn why it was created to
               cater to the unique needs of Dawoodi Bohras, making every journey
@@ -214,10 +237,10 @@ function AboutUs() {
         </div>
         <div className="our-main">
           <div className="first">
-            <h2>Problem Faced</h2>
+            <h2 className="animate-on-scroll">Problem Faced</h2>
             <div className="first-para">
               <div className="actual-para">
-                <p>
+                <p className="animate-on-scroll">
                   One of our team members, along with his family, visited Surat
                   and Ahmedabad and planned a trip to Denmal (Hasanpir) from
                   Ahmedabad. They booked a cab from a local tours and travels
@@ -238,16 +261,16 @@ function AboutUs() {
                   presence of the community there.
                 </p>
               </div>
-              <div className="image-para"></div>
+              <div className="image-para animate-on-scroll"></div>
             </div>
           </div>
 
           <div className="second">
-            <h2>Solution Proposed</h2>
+            <h2 className="animate-on-scroll">Solution Proposed</h2>
             <div className="second-para">
-              <div className="image-second-para"></div>
+              <div className="image-second-para animate-on-scroll"></div>
               <div className="actual-second-para">
-                <p>
+                <p className="animate-on-scroll">
                   After encountering this challenge, that team member was
                   determined to create a platform that would provide essential
                   information about Mazars and the Dawoodi Bohra community.
@@ -272,10 +295,10 @@ function AboutUs() {
           </div>
 
           <div className="third">
-            <h2>Solution Acception</h2>
+            <h2 className="animate-on-scroll">Solution Acception</h2>
             <div className="third-para">
               <div className="actual-third-para">
-                <p>
+                <p className="animate-on-scroll">
                   Nothing great can be achieved without potential. He embraced
                   the mindset that "Those who dare to take risks and seize
                   initiative either triumph or learn. Success lies in the
@@ -298,16 +321,16 @@ function AboutUs() {
                   right path.
                 </p>
               </div>
-              <div className="image-third-para"></div>
+              <div className="image-third-para animate-on-scroll"></div>
             </div>
           </div>
 
           <div className="fourth">
-            <h2>Result</h2>
+            <h2 className="animate-on-scroll">Result</h2>
             <div className="fourth-para">
-              <div className="image-fourth-para"></div>
+              <div className="image-fourth-para animate-on-scroll"></div>
               <div className="actual-fourth-para">
-                <p>
+                <p className="animate-on-scroll">
                   Inspired by a challenging family trip to sacred sites, one of
                   our team members recognized the need for a comprehensive
                   platform to guide Mumineen on their pilgrimages. The idea was
@@ -333,27 +356,27 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      
-      <section className="ezy__team3 light">
-			<Container>
-				<Row className="justify-content-center mb-4 mb-md-5">
-					<Col lg={6} xl={5} className="text-center">
-						<h2 className="ezy__team3-heading mb-3">Our Experts Team</h2>
-						<p className="ezy__team3-sub-heading mb-0">
-            Dedicated professionals with extensive experience, committed to delivering excellence and innovation in every project.
-						</p>
-					</Col>
-				</Row>
-				<Row>
-					{teamMembers.map((member, i) => (
-						<Col md={6} lg={4} className="mt-5" key={i}>
-							<TeamMemberItem member={member} />
-						</Col>
-					))}
-				</Row>
-			</Container>
-		</section>
 
+      <section className="ezy__team3 light">
+        <Container>
+          <Row className="justify-content-center mb-4 mb-md-5">
+            <Col lg={6} xl={5} className="text-center">
+              <h2 className="ezy__team3-heading mb-3 animate-on-scroll">Our Experts Team</h2>
+              <p className="ezy__team3-sub-heading mb-0 animate-on-scroll">
+                Dedicated professionals with extensive experience, committed to
+                delivering excellence and innovation in every project.
+              </p>
+            </Col>
+          </Row>
+          <Row className="animate-on-scroll">
+            {teamMembers.map((member, i) => (
+              <Col md={6} lg={4} className="mt-5" key={i}>
+                <TeamMemberItem member={member} />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
     </div>
   );
 }

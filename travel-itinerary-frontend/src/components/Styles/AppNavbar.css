@@ -9,11 +9,11 @@
     font-size: 62.5%;
   }
   
-  a {
+  Link,a {
     text-decoration: none;
   }
   
-  li a {
+  li a, li Link {
     text-decoration: none;
   }
   
@@ -59,13 +59,13 @@
     font-size: 1.8rem;
   }
   
-  .menu-link ul li a{
+  .menu-link ul li .navbar-link{
     color: #3a5a40;
     transition: 0.5s;
     margin-right: 20px;
   }
   
-  .menu-link ul li:hover > a{
+  .menu-link ul li:hover > .navbar-link{
     transform-origin: left;
     color: #3a5a40;
     text-decoration: underline;

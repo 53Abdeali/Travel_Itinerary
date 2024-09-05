@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
@@ -71,9 +71,10 @@ Rating.propTypes = {
   className: PropTypes.string,
 };
 
+
 const TestimonialItem = ({ testimonial }) => (
   <div className="ezy__testimonial1-item px-4 py-4">
-    <div className="ezy__testimonial1-content mt-3">
+    <div className="ezy__testimonial1-content mt-3 animate-on-scroll">
       <Rating rating={testimonial.rating} showLabel={false} />
       <p className="opacity-50 mb-4">{testimonial.description}</p>
       <div className="d-flex align-items-center">
@@ -101,20 +102,41 @@ TestimonialItem.propTypes = {
 };
 
 const Testimonials = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+  
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
   return (
     <section className="ezy__testimonial1 light">
       <Container>
         <Row className="justify-content-center mb-md-4">
           <Col lg={6} xl={5} className="text-center">
-            <h2 className="ezy__testimonial1-heading mb-3">
+            <h2 className="ezy__testimonial1-heading mb-3 animate-on-scroll">
               Community Reviews
             </h2>
-            <p className="ezy__testimonial1-sub-heading mb-0">
+            <p className="ezy__testimonial1-sub-heading mb-0 animate-on-scroll">
             Read heartfelt reviews and insights from fellow Zaereen on their spiritual journeys. Let their experiences and tips guide you in crafting your perfect travel itinerary
             </p>
           </Col>
         </Row>
-        <Row>
+        <Row className="animate-on-scroll">
           {testimonialList.map((testimonial, i) => (
             <Col md={6} lg={4} className="mt-4" key={i}>
               <TestimonialItem testimonial={testimonial} />

@@ -10,9 +10,31 @@ function Community() {
     setIsVisible(true);
   }, []);
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <div className="main-section">
-      <div className="about">
+      <div className="about animate-on-scroll">
         <div className="heading">
           <h1 className={`fadeInDown ${isVisible ? "visible" : ""}`}>
             About Dawoodi Bohra Community
@@ -24,7 +46,7 @@ function Community() {
             src={process.env.PUBLIC_URL + "/Images/Moula_TUS.jpg"}
             alt="Moula Tus"
           ></img>
-          <div className="Paragraph">
+          <div className="Paragraph animate-on-scroll">
             <p className={`fadeInUp ${isVisible ? "visible" : ""}`}>
               The Dawoodi Bohra community is a subsect of Shia Islam, known for
               its strong emphasis on education, business acumen, and community
@@ -69,7 +91,7 @@ function Community() {
           </div>
         </div>
       </div>
-      <div className="analysis">
+      <div className="analysis animate-on-scroll">
         <ul>
           <li  className={`fadeInDown ${isVisible ? "visible" : ""}`}>
             100+ <br />

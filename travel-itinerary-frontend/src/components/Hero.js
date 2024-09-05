@@ -36,9 +36,32 @@ function Hero() {
     }
   }, [autoPlay, nextSlide]);
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
+
   return (
     <div className='main-div'>
-      <div className='image-gallery'>
+      <div className='image-gallery animate-on-scroll'>
         <IoArrowBackCircle style={{cursor:'pointer', fontSize: 50, color: '#3a5a40' }} onClick={prevSlide} className='carousel-arrow left-arrow' />
         <div className='gallery-container'>
           {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
@@ -48,9 +71,9 @@ function Hero() {
         <IoArrowForwardCircle style={{cursor:'pointer', fontSize: 50, color: '#3a5a40' }} onClick={nextSlide} className='carousel-arrow right-arrow' />
       </div>
 
-      <div className='heading-para'>
+      <div className='heading-para animate-on-scroll'>
         <h1>Discover,<br />Plan,<br />And Explore</h1>
-        <p>Welcome to Your Personalized Travel Itinerary Generator.</p>
+        <p>Journey with Mumineen, Return with Peace & Barakat.</p>
         <div className='call-to-action'>
           <ul>
             <li><a href='/'>Login / Register</a></li>

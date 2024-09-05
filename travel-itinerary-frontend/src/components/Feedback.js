@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import axios from "axios";
 import "./Styles/Feedback.css";
@@ -36,7 +36,7 @@ const FeedbackForm = () => {
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-      <Form.Group className="mb-3 mt-2">
+      <Form.Group className="mb-3 mt-2 animate-on-scroll">
         <Form.Control
           type="text"
           placeholder="Enter Name"
@@ -47,7 +47,7 @@ const FeedbackForm = () => {
         />
         <Form.Control.Feedback type="valid">Message</Form.Control.Feedback>
       </Form.Group>
-      <Form.Group className="mb-3 mt-2">
+      <Form.Group className="mb-3 mt-2 animate-on-scroll">
         <Form.Control
           type="number"
           placeholder="Enter Phone Number"
@@ -58,7 +58,7 @@ const FeedbackForm = () => {
         />
         <Form.Control.Feedback type="valid">Message</Form.Control.Feedback>
       </Form.Group>
-      <Form.Group className="mb-3 mt-2">
+      <Form.Group className="mb-3 mt-2 animate-on-scroll">
         <Form.Control
           type="number"
           placeholder="Enter ITS ID"
@@ -69,7 +69,7 @@ const FeedbackForm = () => {
         />
         <Form.Control.Feedback type="valid">Message</Form.Control.Feedback>
       </Form.Group>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 animate-on-scroll">
         <Form.Control
           as="textarea"
           rows={3}
@@ -89,7 +89,7 @@ const FeedbackForm = () => {
         }}
         variant=""
         type="submit"
-        className="ezy__contact2-btn w-100"
+        className="ezy__contact2-btn w-100 animate-on-scroll"
       >
         Submit
       </Button>
@@ -98,10 +98,10 @@ const FeedbackForm = () => {
 };
 
 const FeedbackFormCard = () => (
-  <Card className="ezy__contact2-form-card">
+  <Card className="ezy__contact2-form-card animate-on-scroll">
     <Card.Body className="p-md-5">
-      <h2 className="ezy__contact2-heading mb-3">Your Feedback</h2>
-      <p className="ezy__contact2-sub-heading mb-5">
+      <h2 className="ezy__contact2-heading mb-3 animate-on-scroll">Your Feedback</h2>
+      <p className="ezy__contact2-sub-heading mb-5 animate-on-scroll">
         Please provide your feedback here, so that we can improve.
       </p>
       <FeedbackForm />
@@ -110,6 +110,27 @@ const FeedbackFormCard = () => (
 );
 
 const Feedback = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    });
+  
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
   return (
     <section className="ezy__contact2 light">
       <div
@@ -121,10 +142,10 @@ const Feedback = () => {
         <Container>
           <Row className="py-4 justify-content-between">
             <Col lg={6} className="mb-5 mb-lg-0">
-              <h2 className="ezy__contact2-title mb-3 mt-0 text-white">
+              <h2 className="ezy__contact2-title mb-3 mt-0 text-white animate-on-scroll">
                 Your Voice Is Crucial !
               </h2>
-              <p className="ezy__contact2-sub-heading mb-0 text-white">
+              <p className="ezy__contact2-sub-heading mb-0 text-white animate-on-scroll">
                 Embark on your journey with the perfect plan and let us know how
                 we're doing. Your valuable feedback guides us toward excellence!
               </p>
