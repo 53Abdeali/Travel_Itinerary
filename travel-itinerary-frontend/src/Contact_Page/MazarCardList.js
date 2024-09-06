@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./mazar.css";
+import useWindowSize from "./useWindowSize";
 
 const MazarCards = ({
   mazar,
@@ -36,15 +37,46 @@ const MazarCards = ({
 };
 
 function MazarCardList({ mazars }) {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
+
   const [visibleCards, setVisibleCards] = useState(5);
   const [showDetails, setShowDetails] = useState(mazars.map(() => false));
+  const { width } = useWindowSize();
+
+  useEffect(() => {
+    if (width <= 998) {
+      setVisibleCards(3); // Adjust for mobile view
+    } else {
+      setVisibleCards(5); // Adjust for laptop view
+    }
+  }, [width]);
 
   const loadMore = () => {
-    setVisibleCards((prev) => prev + 5);
+    setVisibleCards((prev) => prev + (width <= 998 ? 3 : 5));
   };
 
   const showLess = () => {
-    setVisibleCards((prev) => (prev > 5 ? prev - 5 : 5));
+    setVisibleCards((prev) => (prev > (width <= 998 ? 3 : 5) ? prev - (width <= 998 ? 3 : 5) : (width <= 998 ? 3 : 5)));
   };
 
   const toggleContactDetails = (index) => {
@@ -54,6 +86,7 @@ function MazarCardList({ mazars }) {
       return newShowDetails;
     });
   };
+
   return (
     <div>
       <div className="card-list">
@@ -74,7 +107,9 @@ function MazarCardList({ mazars }) {
         {visibleCards < mazars.length && (
           <button onClick={loadMore}>Load More</button>
         )}
-        {visibleCards > 5 && <button onClick={showLess}>Show Less</button>}
+        {visibleCards > (width <= 998 ? 3 : 5) && (
+          <button onClick={showLess}>Show Less</button>
+        )}
       </div>
     </div>
   );
