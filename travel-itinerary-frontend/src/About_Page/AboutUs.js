@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -142,18 +142,26 @@ function AboutUs() {
   return (
     <div className="about-main">
       <div className="welcome">
-        <h1 className="animate-on-scroll">Welcome To Dawoodi Bohra Itinerary</h1>
-        <p className="animate-on-scroll">
-          Dive into the vibrant world of the Dawoodi Bohra community. Connect
-          with us, explore our rich heritage, and make your journey
-          unforgettable. We are excited to have you here!
-        </p>
+        <div className="abt-head">
+          <h1 className="animate-on-scroll">
+            Welcome To Rehlat-Ul-Mumenin
+          </h1>
+        </div>
+        <div className="abt-p">
+          <p className="animate-on-scroll">
+            Dive into the vibrant world of the Dawoodi Bohra community. Connect
+            with us, explore our rich heritage, and make your journey
+            unforgettable. We are excited to have you here!
+          </p>
+        </div>
       </div>
       <div className="about-us">
         <div className="about-question animat-on-scroll">
           <h1>ABOUT US</h1>
           <div className="para1 animate-on-scroll">
-            <h2 className="animate-on-scroll">What is Dawoodi Bohra Itinerary?</h2>
+            <h2 className="animate-on-scroll">
+              What is Dawoodi Bohra Itinerary?
+            </h2>
             <p className="animate-on-scroll">
               A Dawoodi Bohra itinerary is thoughtfully designed to focus on
               spiritual enrichment and community bonding. It often includes
@@ -167,7 +175,9 @@ function AboutUs() {
             </p>
           </div>
           <div>
-            <h2 className="animate-on-scroll">What is the mission and objective of the platform?</h2>
+            <h2 className="animate-on-scroll">
+              What is the mission and objective of the platform?
+            </h2>
             <p className="animate-on-scroll">
               The Dawoodi Bohra Travel Itinerary project aims to bridge the gap
               by offering a platform that not only helps Zaereen plan their
@@ -183,9 +193,13 @@ function AboutUs() {
             </p>
           </div>
           <div>
-            <h2 className="animate-on-scroll">What are the features of this platform?</h2>
+            <h2 className="animate-on-scroll">
+              What are the features of this platform?
+            </h2>
             <ul>
-              <li className="animate-on-scroll"  >Personalized Itinerary Planning:</li>
+              <li className="animate-on-scroll">
+                Personalized Itinerary Planning:
+              </li>
               <p className="animate-on-scroll">
                 Users can create custom travel itineraries tailored to Dawoodi
                 Bohra religious and cultural sites, ensuring visits to important
@@ -197,7 +211,9 @@ function AboutUs() {
                 cultural destinations, making it easy to include them in their
                 travel plans.
               </p>
-              <li className="animate-on-scroll">Secure Login and Registration:</li>
+              <li className="animate-on-scroll">
+                Secure Login and Registration:
+              </li>
               <p className="animate-on-scroll">
                 Secure access to personalized features, including saved
                 itineraries and booking history, using the ITS 52 API for
@@ -218,9 +234,9 @@ function AboutUs() {
             </ul>
           </div>
         </div>
-        <div className="back-images">
-          <div className="box-image1 animate-on-scroll"></div>
-          <div className="box-image2 animate-on-scroll"></div>
+        <div className="back-images animat-on-scroll">
+          <div className="box-image1"></div>
+          <div className="box-image2"></div>
         </div>
       </div>
       <div className="our-story">
@@ -361,7 +377,9 @@ function AboutUs() {
         <Container>
           <Row className="justify-content-center mb-4 mb-md-5">
             <Col lg={6} xl={5} className="text-center">
-              <h2 className="ezy__team3-heading mb-3 animate-on-scroll">Our Experts Team</h2>
+              <h2 className="ezy__team3-heading mb-3 animate-on-scroll">
+                Our Experts Team
+              </h2>
               <p className="ezy__team3-sub-heading mb-0 animate-on-scroll">
                 Dedicated professionals with extensive experience, committed to
                 delivering excellence and innovation in every project.

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 import "./Styles/Footer.css";
+import websitelogo from './Images/website logo.jpg';
 
 const quickLinks = [
   { value: "Home", href: "#!" },
@@ -33,6 +34,10 @@ const contactUs = [
   },
   {
     value: "jamat@ammarnagar.com",
+    href: "#!",
+  },
+  {
+    value: "+91-7869430953",
     href: "#!",
   },
   {
@@ -151,10 +156,10 @@ const Footer = () => {
     <section className="ezy__footer3 light">
       <Container>
         <Row className="text-center text-sm-start">
-          <Col lg={3}>
-            <h2 className="fw-bold animate-on-scroll">Dawoodi Bohra Itinerary</h2>
+          <Col className="animate-on-scroll" style={{display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column'}} lg={3}>
+            <img style={{width:'200px',height:'200px'}} src={websitelogo} alt="Website Logo"/>
           </Col>
-          <Col sm={6} lg={2} className="mt-4 mt-lg-0 animate-on-scroll">
+          <Col style={{display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column'}} sm={6} lg={2} className="mt-4 mt-lg-0 animate-on-scroll">
             <h5
               style={{
                 fontSize: "2rem",
@@ -170,7 +175,7 @@ const Footer = () => {
               ))}
             </Nav>
           </Col>
-          <Col sm={6} lg={2} className="mt-4 mt-lg-0 animate-on-scroll">
+          <Col style={{display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column'}} sm={6} lg={2} className="mt-4 mt-lg-0 animate-on-scroll">
             <h5 style={{
                 fontSize: "2rem",
                 color: "goldenrod",
@@ -182,7 +187,7 @@ const Footer = () => {
               ))}
             </Nav>
           </Col>
-          <Col sm={6} lg={2} className="mt-4 mt-lg-0 animate-on-scroll">
+          <Col style={{display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column'}} sm={6} lg={2} className="mt-4 mt-lg-0 animate-on-scroll">
             <h5 style={{
                 fontSize: "2rem",
                 color: "goldenrod",
@@ -194,7 +199,7 @@ const Footer = () => {
               ))}
             </Nav>
           </Col>
-          <Col sm={6} lg={3} className="mt-4 mt-lg-0 animate-on-scroll">
+          <Col style={{display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column'}} sm={6} lg={3} className="mt-4 mt-lg-0 animate-on-scroll">
             <h5 style={{
                 fontSize: "2rem",
                 color: "goldenrod",
@@ -214,7 +219,7 @@ const Footer = () => {
               style={{ color: "#3a5a40", fontSize: "1.5rem" }}
               className="mb-0 mt-1 animate-on-scroll"
             >
-              Copyright &copy; Dawoodi Bohra Itinerary, All rights reserved.
+              Copyright &copy; Rehlat-Ul-Mumenin, All rights reserved.
             </p>
           </Col>
           <Col md={6}>

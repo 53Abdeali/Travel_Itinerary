@@ -64,7 +64,7 @@ function Features() {
           <div className="para">
             <h2>Overview</h2>
             <p>
-              The Dawoodi Bohra Travel Itinerary project is a specialized travel
+              The Rihalat-Ul-Mumenin project is a specialized travel
               planning tool designed to cater to the unique needs and
               preferences of the Dawoodi Bohra community. This application
               provides a personalized travel experience, enabling users to plan
@@ -77,7 +77,7 @@ function Features() {
             </p>
             <h2>Purpose</h2>
             <p>
-              The primary purpose of the Dawoodi Bohra Travel Itinerary project
+              The primary purpose of the Rihalat-Ul-Mumenin project
               is to provide an easy-to-use platform for planning and organizing
               travel itineraries that resonate with the preferences and
               traditions of the Dawoodi Bohra community. The project seeks to
@@ -162,7 +162,7 @@ function Features() {
         <div className={`Solution ${isVisible ? "rotateDownLeft" : ""}`}>
           <h3>Solution To Zaereen</h3>
           <p>
-            The Dawoodi Bohra Travel Itinerary project aims to bridge this gap
+            The Rihalat-Ul-Mumenin project aims to bridge this gap
             by offering a platform that not only helps Zaereen plan their visits
             to major pilgrimage sites but also guides them to smaller, nearby
             sites of significance. The proposed solution includes detailed

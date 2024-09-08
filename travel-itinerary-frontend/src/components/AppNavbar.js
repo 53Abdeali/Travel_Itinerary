@@ -2,60 +2,43 @@ import React, { useState } from "react";
 import "./Styles/AppNavbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import logo from "./Images/Logo.png";
 
 function AppNavbar() {
   const [showMediaIcon, setShowMediaIcon] = useState(false);
-  
+
   return (
     <nav className="main-nav">
       <div className="logo">
-        {/* <img src="path-to-your-logo-image" alt="Logo" /> */}
-        <h2>
-          <span>B</span>ohra
-          <span> I</span>tinerary
-        </h2>
+        <img style={{ width: "50px", height: "50px" }} src={logo} alt="Logo" />
+        <h2>رِحْلَةُ الْمُؤْمِنِيْنْ</h2>
       </div>
       <div
         className={showMediaIcon ? "menu-link mobile-menu-link" : "menu-link"}
       >
         <ul>
           <li>
-            <Link
-              to="/"
-              className="navbar-link"
-            >
+            <Link to="/" className="navbar-link">
               Home
             </Link>
           </li>
           <li>
-            <Link
-              to="/explore"
-              className="navbar-link"
-            >
+            <Link to="/explore" className="navbar-link">
               Explore Destinations
             </Link>
           </li>
           <li>
-            <Link
-              to="/journey"
-              className="navbar-link"
-            >
+            <Link to="/journey" className="navbar-link">
               Plan a Journey
             </Link>
           </li>
           <li>
-            <Link
-              to="/about"
-              className="navbar-link"
-            >
+            <Link to="/about" className="navbar-link">
               About Us
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact"
-              className="navbar-link"
-            >
+            <Link to="/contact" className="navbar-link">
               Contact Us
             </Link>
           </li>
@@ -78,7 +61,7 @@ function AppNavbar() {
               setShowMediaIcon(!showMediaIcon);
             }}
           >
-            <GiHamburgerMenu style={{ color: "darkgreen" }} />
+            <GiHamburgerMenu style={{ color: "#3a5a40" }} />
           </a>
         </div>
       </div>

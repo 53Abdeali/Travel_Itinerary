@@ -95,7 +95,7 @@ function Community() {
         <ul>
           <li  className={`fadeInDown ${isVisible ? "visible" : ""}`}>
             100+ <br />
-            <span className={`fadeInDown ${isVisible ? "visible" : ""}`}>Mazaar Mubaraka</span>
+            <span className={`fadeInDown ${isVisible ? "visible" : ""}`}>Mazar Mubaraka</span>
           </li>
           <div className="Line"></div>
           <li  className={`fadeInDown ${isVisible ? "visible" : ""}`}>

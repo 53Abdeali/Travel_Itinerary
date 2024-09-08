@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Layla Thuluth';
+  src: url('./LaylaThuluth Regular.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -23,29 +30,32 @@
   
   .main-nav{
     width: 100%;
-    height: 8rem;
+    height: 10rem;
     display: grid;
-    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    grid-template-columns: 5rem 1fr 2fr 1fr 10rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
   
   .logo{
-    display: grid;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     grid-column: 2/3;
   }
   
   .logo h2{
-    font-size: 2.5rem;
-    font-weight: 400;
-    background: -webkit-linear-gradient(180deg,#3a5a40,goldenrod);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: goldenrod;
+    font-family: "Layla Thuluth", serif;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
   }
   
   .menu-link{
     grid-column: 3/4;
+    padding-top: 12px;
   }
   
   .menu-link ul{
@@ -67,13 +77,14 @@
   
   .menu-link ul li:hover > .navbar-link{
     transform-origin: left;
-    color: #3a5a40;
-    text-decoration: underline;
-    transition: 0.5s ease-in-out;
+    color: goldenrod;
+    transition: 0.2s ease-in-out;
+    border-bottom: 2px solid goldenrod;
   }
   
   .login{
     grid-column: 4/5;
+    padding-top: 10px;
   }
   
   .login ul{
@@ -105,10 +116,10 @@
   }
   
   .login ul li a:hover {
-    background-color: #3a5a40;
+    background-color: goldenrod;
     color: white;
     transition: 0.5s ease-in-out;
-    border: 2px solid #3a5a40;
+    border: 2px solid goldenrod;
     border-radius: 10px;
   }
   
@@ -204,17 +215,35 @@
   
   @media (max-width: 520px) {
     .main-nav {
-      height: 6rem;
+      height: 7rem;
       grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
     }
   
-    .logo,
     .login ul {
       height: 6rem;
     }
-  
+
+    .logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 170px;
+    }
+    
+    .logo img{
+     display: none; 
+    }
+
     .logo h2 {
       font-size: 2rem;
+      margin-top: 200px;
+      text-align: center;
+    }
+
+    .navbar-link{
+      font-size: 20px;
+      padding-top: 10px;
+      width: 100%;
     }
   
     .login {

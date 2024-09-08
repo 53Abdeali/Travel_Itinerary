@@ -20,9 +20,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 const faqList = [
   {
     isActive: true,
-    question: "What is the Dawoodi Bohra Travel Itinerary platform?",
+    question: "What is the Rihalat-Ul-Mumenin platform?",
     answer:
-      "The Dawoodi Bohra Travel Itinerary is a personalized trip-planning service designed for the Dawoodi Bohra community to help members easily visit religious and cultural sites.",
+      "The Rihalat-Ul-Mumenin is a personalized trip-planning service designed for the Dawoodi Bohra community to help members easily visit religious and cultural sites.",
   },
   {
     isActive: false,
@@ -82,7 +82,7 @@ const FaqItem = ({ faq }) => {
       >
         <span
           style={{
-            color: "#3a5a40",
+            color: "goldenrod",
             fontFamily: "'Poppins',serif",
             fontSize: "15px",
           }}
@@ -90,14 +90,14 @@ const FaqItem = ({ faq }) => {
         >
           {faq.question}
         </span>
-        <FontAwesomeIcon style={{ color: "#3a5a40" }} icon={faChevronDown} />
+        <FontAwesomeIcon style={{ color: "goldenrod" }} icon={faChevronDown} />
       </Button>
       <Collapse in={isOpen}>
         <div>
           <div className="ezy__faq10-content p-3 p-lg-4">
             <p
               style={{
-                color: "goldenrod",
+                color: "#3a5a40",
                 fontFamily: "'Poppins',serif",
                 fontSize: "15px",
               }}
@@ -407,7 +407,7 @@ function ContactUs() {
                 style={{ color: "#3a5a4c", fontFamily: "'Poppins',serif" }}
                 className="ezy__faq10-sub-heading mb-0 animate-on-scroll"
               >
-                The Dawoodi Bohra Travel Itinerary is a dedicated platform
+                The Rihalat-Ul-Mumenin is a dedicated platform
                 designed to simplify pilgrimage planning for the Dawoodi Bohra
                 community. It offers detailed itineraries, route optimizations,
                 and real-time updates for visiting mazars and religious

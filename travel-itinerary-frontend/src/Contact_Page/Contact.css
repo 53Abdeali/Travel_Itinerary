@@ -9,7 +9,7 @@
 .circle {
   position: absolute;
   z-index: 0;
-  top: 16.5%;
+  top: 18%;
   left: 40%;
   transform: translate(-80%, -50%);
   clip-path: inset(39.8% 0 0 0);
