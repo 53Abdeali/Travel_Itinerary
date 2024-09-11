@@ -28,6 +28,11 @@ public class MazarController {
         return mazarService.getMazarById(id);
     }
 
+    @GetMapping("/visited")
+    public List<MazarContact> getMazarsByVisited() {
+        return mazarService.getMazarsByVisited("most");
+    }
+
     @GetMapping("/search")
     public List<MazarContact> searchMazarsByName(@RequestParam String name){
         return mazarService.searchMazarsByName(name);

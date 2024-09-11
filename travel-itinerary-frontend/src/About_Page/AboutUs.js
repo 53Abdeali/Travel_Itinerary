@@ -160,10 +160,10 @@ function AboutUs() {
           <h1>ABOUT US</h1>
           <div className="para1 animate-on-scroll">
             <h2 className="animate-on-scroll">
-              What is Dawoodi Bohra Itinerary?
+              What is Rehlat-Ul-Mumenin?
             </h2>
             <p className="animate-on-scroll">
-              A Dawoodi Bohra itinerary is thoughtfully designed to focus on
+              The Rehlat-Ul-Mumenin is thoughtfully designed to focus on
               spiritual enrichment and community bonding. It often includes
               visits to significant masjids, shrines of revered saints, and
               historical sites associated with our faith. These journeys, known
@@ -179,7 +179,7 @@ function AboutUs() {
               What is the mission and objective of the platform?
             </h2>
             <p className="animate-on-scroll">
-              The Dawoodi Bohra Travel Itinerary project aims to bridge the gap
+              The Rehlat_ul_Mumenin project aims to bridge the gap
               by offering a platform that not only helps Zaereen plan their
               visits to major pilgrimage sites but also guides them to smaller,
               nearby sites of significance. The proposed solution includes

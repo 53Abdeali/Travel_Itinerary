@@ -21,6 +21,10 @@ public class MazarService {
         return mazarRepo.findById(id).orElse(null);
     }
 
+    public List<MazarContact> getMazarsByVisited(String visited) {
+        return mazarRepo.findByVisitedContainingIgnoreCase(visited);
+    }
+
     public List<MazarContact> searchMazarsByName(String name) {
         return mazarRepo.findByNameContainingIgnoreCase(name);
     }

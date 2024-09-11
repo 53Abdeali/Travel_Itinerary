@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import AppNavbar from "./AppNavbar";
+import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Community from "./Community";
 import Features from "./Features";
@@ -9,7 +10,7 @@ import Feedback from "./Feedback";
 import Footer from "./Footer";
 import AboutUs from "../About_Page/AboutUs";
 import ContactUs from "../Contact_Page/ContactUs";
-import Navbar from "./Navbar";
+import Explore from "../ExploreDestination/explore";
 
 function Home() {
   return (
@@ -33,6 +34,7 @@ function All() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />}/>
+          <Route path="/explore" element={<Explore />}/>
         </Routes>
         <Footer/>
       </div>

@@ -15,6 +15,8 @@ public class MazarContact {
     private String name;
     private String contactNumber;
     private String location;
+    private String link;
+    private String visited;
 
     public Long getId() {
         return id;
@@ -62,5 +64,21 @@ public class MazarContact {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getLink(){
+        return link;
+    }
+
+    public void setLink(String link){
+        this.link = link;
+    }
+
+    public String getVisited(){
+        return visited;
+    }
+
+    public void setVisited(String visited){
+        this.visited = visited;
     }
 }

@@ -16,8 +16,8 @@ public class contService {
     public void sendMessage(contModel cModel){
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo("aliabdealifakhri53@gmail.com");
-        msg.setSubject("Rihalat-ul-Mumin Query Message Form : " + cModel.getName());
-        msg.setText("Assalam\n + \n Name: " + cModel.getName() + "\n\n Phone: "+ cModel.getPhone() + "\n\n ItsID: "+ cModel.getItsId() + "\n\n Message: "+ cModel.getMessage());
+        msg.setSubject("Rehlat-ul-Mumin Query Message Form : " + cModel.getName());
+        msg.setText("Assalam\n" + "\n Name: " + cModel.getName() + "\n\n Phone: "+ cModel.getPhone() + "\n\n ItsID: "+ cModel.getItsId() + "\n\n Message: "+ cModel.getMessage());
 
         jms.send(msg);
     }

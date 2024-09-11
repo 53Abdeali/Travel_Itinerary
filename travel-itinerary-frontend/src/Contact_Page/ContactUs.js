@@ -289,81 +289,145 @@ function ContactUs() {
         </div>
 
         <div className="right">
-        {formSubmitted ? (
-        <div className="success-message">
-          <p>Your query has been sent successfully!</p>
-          <button onClick={() => setFormSubmitted(false)}>Send Another Query</button>
-        </div>
-      ) : (
-          <form onSubmit={handleSubmitContact} className="contact-form">
-            <div className="contact-input animate-on-scroll">
-              <label className="label">Name</label>
-              <input
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                type="text"
-                autoComplete="off"
-                required
-              />
-              {errors.name && <p className="error">{errors.name}</p>}
-            </div>
-
-            <div className="cont-its">
-              <div className="contact-input w-100 animate-on-scroll">
-                <label className="label">ITS ID</label>
+          {formSubmitted ? (
+            <form onSubmit={handleSubmitContact} className="contact-form">
+              <div className="contact-input animate-on-scroll">
+                <label className="label">Name</label>
                 <input
-                  type="number"
-                  name="itsId"
-                  value={formData.itsId}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
+                  type="text"
                   autoComplete="off"
                   required
                 />
-                {errors.itsId && <p className="error">{errors.itsId}</p>}
+                {errors.name && <p className="error">{errors.name}</p>}
+              </div>
+
+              <div className="cont-its">
+                <div className="contact-input w-100 animate-on-scroll">
+                  <label className="label">ITS ID</label>
+                  <input
+                    type="number"
+                    name="itsId"
+                    value={formData.itsId}
+                    onChange={handleChange}
+                    autoComplete="off"
+                    required
+                  />
+                  {errors.itsId && <p className="error">{errors.itsId}</p>}
+                </div>
+
+                <div className="contact-input animate-on-scroll">
+                  <label className="label">Phone Number</label>
+                  <input
+                    value={formData.phone}
+                    onChange={handleChange}
+                    type="number"
+                    name="phone"
+                    autoComplete="off"
+                    required
+                  />
+                  {errors.phone && <p className="error">{errors.phone}</p>}
+                </div>
               </div>
 
               <div className="contact-input animate-on-scroll">
-                <label className="label">Phone Number</label>
-                <input
-                  value={formData.phone}
+                <label className="label">Message</label>
+                <textarea
+                  value={formData.message}
                   onChange={handleChange}
-                  type="number"
-                  name="phone"
+                  name="message"
                   autoComplete="off"
                   required
                 />
-                {errors.phone && <p className="error">{errors.phone}</p>}
+                {errors.message && <p className="error">{errors.message}</p>}
               </div>
-            </div>
 
-            <div className="contact-input animate-on-scroll">
-              <label className="label">Message</label>
-              <textarea
-                value={formData.message}
-                onChange={handleChange}
-                name="message"
-                autoComplete="off"
-                required
-              />
-              {errors.message && <p className="error">{errors.message}</p>}
-            </div>
-
-            <div className="buttons animate-on-scroll">
-              <button className="sub-btn upload w-100">
-                <span>
-                  <GrAttachment className="cont-icon" />
-                  Add Attachment
-                </span>
-                <input type="file" name="attachment" />
-              </button>
-              <div className="sub-btn send">
-                <BsSendFill className="cont-icon" />
-                <input type="submit" value="Send Query" className="send" />
+              <div className="buttons animate-on-scroll">
+                <button className="sub-btn upload w-100">
+                  <span>
+                    <GrAttachment className="cont-icon" />
+                    Add Attachment
+                  </span>
+                  <input type="file" name="attachment" />
+                </button>
+                <div className="sub-btn send">
+                  <BsSendFill className="cont-icon" />
+                  <input type="submit" value="Send Query" className="send" />
+                </div>
               </div>
-            </div>
-          </form>
-      )}
+            </form>
+          ) : (
+            <form onSubmit={handleSubmitContact} className="contact-form">
+              <div className="contact-input animate-on-scroll">
+                <label className="label">Name</label>
+                <input
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  type="text"
+                  autoComplete="off"
+                  required
+                />
+                {errors.name && <p className="error">{errors.name}</p>}
+              </div>
+
+              <div className="cont-its">
+                <div className="contact-input w-100 animate-on-scroll">
+                  <label className="label">ITS ID</label>
+                  <input
+                    type="number"
+                    name="itsId"
+                    value={formData.itsId}
+                    onChange={handleChange}
+                    autoComplete="off"
+                    required
+                  />
+                  {errors.itsId && <p className="error">{errors.itsId}</p>}
+                </div>
+
+                <div className="contact-input animate-on-scroll">
+                  <label className="label">Phone Number</label>
+                  <input
+                    value={formData.phone}
+                    onChange={handleChange}
+                    type="number"
+                    name="phone"
+                    autoComplete="off"
+                    required
+                  />
+                  {errors.phone && <p className="error">{errors.phone}</p>}
+                </div>
+              </div>
+
+              <div className="contact-input animate-on-scroll">
+                <label className="label">Message</label>
+                <textarea
+                  value={formData.message}
+                  onChange={handleChange}
+                  name="message"
+                  autoComplete="off"
+                  required
+                />
+                {errors.message && <p className="error">{errors.message}</p>}
+              </div>
+
+              <div className="buttons animate-on-scroll">
+                <button className="sub-btn upload w-100">
+                  <span>
+                    <GrAttachment className="cont-icon" />
+                    Add Attachment
+                  </span>
+                  <input type="file" name="attachment" />
+                </button>
+                <div className="sub-btn send">
+                  <BsSendFill className="cont-icon" />
+                  <input type="submit" value="Send Query" className="send" />
+                </div>
+              </div>
+            </form>
+          )}
         </div>
       </div>
       <div className="wave">
@@ -407,11 +471,10 @@ function ContactUs() {
                 style={{ color: "#3a5a4c", fontFamily: "'Poppins',serif" }}
                 className="ezy__faq10-sub-heading mb-0 animate-on-scroll"
               >
-                The Rihalat-Ul-Mumenin is a dedicated platform
-                designed to simplify pilgrimage planning for the Dawoodi Bohra
-                community. It offers detailed itineraries, route optimizations,
-                and real-time updates for visiting mazars and religious
-                landmarks.
+                The Rihalat-Ul-Mumenin is a dedicated platform designed to
+                simplify pilgrimage planning for the Dawoodi Bohra community. It
+                offers detailed itineraries, route optimizations, and real-time
+                updates for visiting mazars and religious landmarks.
               </p>
             </Col>
           </Row>

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.alld {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.alld img {
+  width: 40%;
+}
+
+.alld h2 {
+  font-size: 3rem;
+  font-family: "Poppins", serif;
+}
+
+.caro-link {
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid goldenrod;
+  color: goldenrod;
+}
+
+.note {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.note p {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  color: #3a5a40;
+  font-family: "Poppins", serif;
+}
+
+.note p .note-link {
+  color: goldenrod;
+  font-family: "Poppins", serif;
+}
+
+.design {
+  height: 50px;
+  width: 80%;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When in view */
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 998px) {
+  .alld img {
+    width: 35%;
+  }
+
+  .alld h2 {
+    font-size: 2.5rem;
+  }
+  .design {
+    height: 50px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .alld {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    flex-direction: column;
+  }
+
+  .alld img {
+    width: 70%;
+  }
+
+  .alld h2 {
+    font-size: 1.7rem;
+  }
+
+  .caro-link {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: none;
+    color: goldenrod;
+  }
+
+  .note p {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: #3a5a40;
+  }
+
+  .design {
+    height: 50px;
+    width: 100%;
+  }
+}

@@ -8,6 +8,8 @@ import java.util.List;
 
 @Repository
 public interface MazarRepo extends JpaRepository<MazarContact, Long> {
+    List<MazarContact> findByVisitedContainingIgnoreCase(String visited);
+
     List<MazarContact> findByNameContainingIgnoreCase(String name);
 
     List<MazarContact> findByCityContainingIgnoreCase(String city);
