@@ -11,6 +11,8 @@ import Footer from "./Footer";
 import AboutUs from "../About_Page/AboutUs";
 import ContactUs from "../Contact_Page/ContactUs";
 import Explore from "../ExploreDestination/explore";
+import AllDest from "../ExploreDestination/AllDest";
+import MazarDetails from "../ExploreDestination/MazarDetails";
 
 function Home() {
   return (
@@ -28,13 +30,14 @@ function All() {
   return (
     <Router>
       <div>
-        {/* <AppNavbar /> */}
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />}/>
           <Route path="/explore" element={<Explore />}/>
+          <Route path="/allDestination" element={<AllDest />}/>
+          <Route path="/mazars/:mazarName/:city" element={<MazarDetails />} />
         </Routes>
         <Footer/>
       </div>

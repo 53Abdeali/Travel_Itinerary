@@ -4,6 +4,8 @@ import "./ExploreStyle/destinationcards.css";
 import useWindowSize from "../Contact_Page/useWindowSize";
 
 function DestinationCardsList({mazar, city, name}) {
+  const citySlug = city.toLowerCase().replace(/\s+/g, '-');
+  const mazarSlug = name.toLowerCase().replace(/\s+/g, '-');
   return (
     <div className="destination">
       <div className="dest-image">
@@ -12,7 +14,7 @@ function DestinationCardsList({mazar, city, name}) {
           <h2>{name}</h2>
           <h3>{city}</h3>
           <div className="dest-link">
-            <Link className="main-dest-link" to=''>
+            <Link className="main-dest-link" to={`/mazars/${mazarSlug}/${citySlug}`}>
               Explore Mazar
             </Link>
           </div>

@@ -3,7 +3,7 @@ import './Styles/WelcomeLoader.css';
 
 const WelcomeLoader = ({ onComplete }) => {
   const [text, setText] = useState('');
-  const fullText = "أهلا و سهلا"; // Your phrase
+  const fullText = "أَهْلاً وَ سَهْلاَ"; // Your phrase
   const words = fullText.split(' '); // Split the phrase into words
   const [index, setIndex] = useState(0); // Track the current word index
 

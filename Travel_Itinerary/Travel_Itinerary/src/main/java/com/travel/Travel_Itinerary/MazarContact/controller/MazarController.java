@@ -8,13 +8,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
-
 @RestController
 @RequestMapping("/api/mazars")
 @CrossOrigin(origins = "http://localhost:3000")
 public class MazarController {
-    
+
     @Autowired
     private MazarService mazarService;
 
@@ -33,18 +31,23 @@ public class MazarController {
         return mazarService.getMazarsByVisited("most");
     }
 
+    @GetMapping("/image")
+    public MazarContact getMazarByImage(@PathVariable String image) {
+        return mazarService.getMazarsImage(image);
+    }
+
     @GetMapping("/search")
-    public List<MazarContact> searchMazarsByName(@RequestParam String name){
+    public List<MazarContact> searchMazarsByName(@RequestParam String name) {
         return mazarService.searchMazarsByName(name);
-    }  
+    }
 
     @GetMapping("/searchByCity")
-    public List<MazarContact> searchMazarsByCity(@RequestParam String city){
+    public List<MazarContact> searchMazarsByCity(@RequestParam String city) {
         return mazarService.searchMazarsByCity(city);
     }
 
     @GetMapping("/searchByNameAndCity")
-    public List<MazarContact> searchMazarsByNameAndCity(@RequestParam String name, @RequestParam String city){
+    public List<MazarContact> searchMazarsByNameAndCity(@RequestParam String name, @RequestParam String city) {
         return mazarService.searchMazarsByNameAndCity(name, city);
-    }  
+    }
 }

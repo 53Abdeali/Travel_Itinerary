@@ -15,4 +15,6 @@ public interface MazarRepo extends JpaRepository<MazarContact, Long> {
     List<MazarContact> findByCityContainingIgnoreCase(String city);
 
     List<MazarContact> findByNameContainingIgnoreCaseAndCityContainingIgnoreCase(String name, String city);
+
+    MazarContact findByImage(String image);
 }

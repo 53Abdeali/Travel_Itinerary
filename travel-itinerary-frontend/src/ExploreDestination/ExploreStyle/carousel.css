@@ -7,7 +7,8 @@
 }
 
 .carousel {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  z-index: -1;
 }
 
 .swiper {
@@ -59,30 +60,6 @@
   font-family: "Poppins", serif;
 }
 
-.exploreSearch {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  top: 92%;
-  position: absolute;
-  z-index: 9999;
-}
-
-.exploreSearch input {
-  font-size: 3rem;
-  width: 80%;
-  outline: none;
-  margin: 0 25px;
-  border: none;
-  text-align: left;
-  border-radius: 25px;
-  border-bottom: 2px solid rgb(0, 0, 0, 0.4);
-  padding: 25px 0 25px 25px;
-  font-family: "Poppins", serif;
-}
-
 .caro-icon {
   font-size: 3rem;
   background-color: white;
@@ -124,11 +101,6 @@
     font-size: 1.8rem;
     text-align: center;
   }
-
-  .exploreSearch {
-    top: 83%;
-    width: 100%;
-  }
 }
 
 @media (max-width: 520px) {
@@ -153,13 +125,5 @@
     text-align: left;
   }
 
-  .exploreSearch {
-    top: 88%;
-    width: 100%;
-  }
 
-  .exploreSearch input {
-    width: 100%;
-    padding-right: 45px;
-  }
 }

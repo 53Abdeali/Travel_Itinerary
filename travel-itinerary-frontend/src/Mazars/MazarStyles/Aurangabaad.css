@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "Layla Thuluth";
+  src: url("./LaylaThuluth Regular.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.aurangabaad {
+  display: flex;
+  justify-content: space-around;
+  align-items: justify;
+  background: linear-gradient(90deg, #fff, rgb(58, 90, 64, 0.3));
+  padding: 12px 25px;
+}
+
+.aurangabaad-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aurangabaad-text h1,
+.aurangabaad-ways h1 {
+  color: #3a5a40;
+  display: inline-block;
+  font-size: 3rem;
+  font-family: "Poppins", serif;
+  border-bottom: 2px solid #3a5a40;
+}
+
+.aurangabaad-text p, .aurangabaad-text p span  {
+  width: 80%;
+  font-size: 1.5rem;
+  font-family: "Poppins", serif;
+  text-align: justify;
+}
+
+.blur-text {
+  display: inline-block;
+  filter: blur(0.5px); /* Apply blur effect */
+  max-height: 35px; /* Limit the visible height */
+  overflow: hidden; /* Hide the overflowing content */
+  transition: filter 0.3s ease-in-out, max-height 1s ease-in-out;
+}
+
+.aurangabaad-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 0;
+}
+
+.aurangabaad-lisan {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.drop-up-down {
+  outline: none;
+  border: none;
+  color: #3a5a40;
+  font-size: 4rem;
+  font-family: "Poppins", serif;
+  text-decoration: none;
+  border-radius: 50%;
+  transform: translateY(-30%);
+  cursor: pointer;
+}
+
+.lisan-btn{
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Poppins", serif;
+  text-decoration: none;
+  background-color: goldenrod;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.la {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.link-aurangabaad {
+  background-color: goldenrod;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Poppins", serif;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.aurangabaad-ways {
+  width: 60%;
+}
+
+.ways {
+  display: flex;
+  justify-content: space-around;
+  align-items: justify;
+  flex-direction: column;
+}
+
+.ways li {
+  text-align: justify;
+}
+
+.aurangabaad-ways .heading {
+  font-size: 2rem;
+  font-family: "Poppins", serif;
+  color: goldenrod;
+}
+
+.aurangabaad-ways ul {
+  padding: 0;
+}
+
+.aurangabaad-ways li,
+.aurangabaad-ways span {
+  font-size: 1.5rem;
+  font-family: "Poppins", serif;
+  color: #3a5a40;
+}
+
+.icon-ways {
+  color: goldenrod;
+  font-size: 2rem;
+}
+
+.aurangabaad-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+  margin-bottom: 25px;
+}
+
+.aurangabaad-gallery h1 {
+  color: goldenrod;
+  font-size: 3rem;
+  font-family: "Poppins", serif;
+  display: inline-block;
+  border-bottom: 2px solid goldenrod;
+}
+
+.aurangabaad-abt{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: justify;
+}
+
+.aurangabaad-image{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.aurangabaad-image h2{
+  color: #3a5a40;
+  font-size: 2rem;
+  font-family: "Poppins",serif;
+  display: inline-block;
+  border-bottom: 2px solid #3a5a40;
+}
+
+.aurangabaad-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.aurangabaad-all{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  padding-top: 12px;
+}
+
+.aur-abt,.aur-acc-nearby, .aur-urs-date{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+.ar-para{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: justify;
+  width: 100%;
+}
+
+.aur-abt h2{
+  color: #3a5a40;
+  font-size: 2rem;
+  font-family: "Poppins",serif;
+  display: inline-block;
+  border-bottom: 2px solid #3a5a40;
+}
+
+.aur-abt p{
+  color: #3a5a40;
+  font-size: 1.5rem;
+  font-family: "Poppins",serif;
+  width: 100%;
+}
+
+.aur-acc-nearby h2, .aur-urs-date h2, .aur-mannat h2{
+  font-family: "Poppins",serif;
+  display: inline-block;
+  border-bottom: 2px solid #3a5a40;
+}
+
+.aur-acc-nearby p, .aur-urs-date p, .aur-mannat p{
+  color: #3a5a40;
+  font-size: 1.5rem;
+  font-family: "Poppins",serif;
+  width: 100%;
+  padding: 0;
+}
+
+.aur-urs-date .arabic{
+  color: #3a5a40;
+  font-size: 25px;
+  font-family: "Layla Thuluth",serif;
+  width: 100%;
+  padding: 0;
+}
+
+.arabic span{
+  font-family:serif;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When in view */
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width:998px) {
+  .aurangabaad{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aurangabaad-text p{
+    width: 100%;
+  }
+
+  .aurangabaad-ways{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 12px;
+  }
+
+  .aurangabaad-abt{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .aurangabaad-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .aurangabaad-image img{
+    width: 400px;
+    height: 400px;
+  }
+
+  .aurangabaad-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .aur-abt, .aur-acc-nearby, .aur-urs-date{
+    width: 100%;
+    padding: 0 12px;
+  }
+
+ .aur-acc-nearby h2, .aur-urs-date h2, .aur-mannat h2{
+    color: goldenrod;
+    border-color: goldenrod;
+  }
+
+  .aur-abt p{
+    width: 100%;
+    text-align: justify;
+  }
+}
+
+@media (max-width:520px) {
+  .la{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .link-aurangabaad, .lisan-btn{
+    font-size: 1.5rem;
+  }
+
+  .aurangabaad-image img{
+    width: 350px;
+    height: 350px;
+  }
+
+  .aur-urs-date .ar-para{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

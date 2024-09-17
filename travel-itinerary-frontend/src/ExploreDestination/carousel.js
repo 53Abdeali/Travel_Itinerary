@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import axios from "axios";
-import { FaMagnifyingGlass } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -91,15 +90,7 @@ function Carousel({ mazar, city }) {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="exploreSearch animate-on-scroll">
-            <input
-              type="search"
-              placeholder="Search Mazar By Name or By City"
-              // value={searchTerm}
-              // onChange={handleSearch}
-            />
-            <FaMagnifyingGlass className="caro-icon" />
-          </div>
+
         </div>
       </div>
     </div>

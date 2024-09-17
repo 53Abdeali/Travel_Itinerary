@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  z-index: 99;
 }
 
 .alld img {
@@ -55,6 +55,28 @@
   width: 80%;
 }
 
+.exploreSearch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  z-index: 9999;
+}
+
+.exploreSearch input {
+  font-size: 3rem;
+  width: 80%;
+  outline: none;
+  margin: 0 25px;
+  border: none;
+  text-align: left;
+  border-radius: 25px;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.4);
+  padding: 25px 0 25px 25px;
+  font-family: "Poppins", serif;
+}
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(20px);
@@ -79,6 +101,7 @@
     height: 50px;
     width: 100%;
   }
+
 }
 
 @media (max-width: 520px) {
@@ -88,6 +111,10 @@
     align-items: center;
     padding-top: 25px;
     flex-direction: column;
+  }
+
+  .alld .alld-img{
+    margin-top: 25px;
   }
 
   .alld img {
@@ -115,5 +142,10 @@
   .design {
     height: 50px;
     width: 100%;
+  }
+
+  .exploreSearch input {
+    width: 100%;
+    padding-right: 45px;
   }
 }

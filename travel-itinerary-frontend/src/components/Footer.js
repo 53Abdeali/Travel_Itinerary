@@ -7,10 +7,10 @@ import "./Styles/Footer.css";
 import websitelogo from './Images/website logo.jpg';
 
 const quickLinks = [
-  { value: "Home", href: "#!" },
-  { value: "About Us", href: "#!" },
-  { value: "Plan a Journey", href: "#!" },
-  {value: "Terms and Conditions", href:"#!"}
+  { value: "Home", href: "/" },
+  { value: "About Us", href: "/about" },
+  { value: "Plan a Journey", href: "/journey" },
+  {value: "Terms and Conditions", href:"/t&c"}
 ];
 
 const socialMedia = [
@@ -21,10 +21,10 @@ const socialMedia = [
 ];
 
 const features = [
-  { value: "Community Centers", href: "#!" },
-  { value: "Community Events", href: "#!" },
-  { value: "Huzurala TUS Update", href: "#!" },
-  { value: "Nearby Accomodations", href: "#!" },
+  { value: "Community Centers", href: "/community" },
+  { value: "Community Events", href: "/events" },
+  { value: "Huzurala TUS Update", href: "/huzurala-update" },
+  { value: "Nearby Accomodations", href: "/accomodations" },
 ];
 
 const contactUs = [
@@ -49,15 +49,15 @@ const contactUs = [
 const navigations = [
   {
     value: "Home",
-    href: "#!",
+    href: "/",
   },
   {
     value: "About",
-    href: "#!",
+    href: "/about",
   },
   {
     value: "Privacy Policy",
-    href: "#!",
+    href: "/privacy-policy",
   },
 ];
 

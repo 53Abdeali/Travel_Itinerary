@@ -20,9 +20,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 const faqList = [
   {
     isActive: true,
-    question: "What is the Rihalat-Ul-Mumenin platform?",
+    question: "What is the Rehlat-Ul-Mumenin platform?",
     answer:
-      "The Rihalat-Ul-Mumenin is a personalized trip-planning service designed for the Dawoodi Bohra community to help members easily visit religious and cultural sites.",
+      "The Rehlat-Ul-Mumenin is a personalized trip-planning service designed for the Dawoodi Bohra community to help members easily visit religious and cultural sites.",
   },
   {
     isActive: false,
@@ -471,7 +471,7 @@ function ContactUs() {
                 style={{ color: "#3a5a4c", fontFamily: "'Poppins',serif" }}
                 className="ezy__faq10-sub-heading mb-0 animate-on-scroll"
               >
-                The Rihalat-Ul-Mumenin is a dedicated platform designed to
+                The Rehlat-Ul-Mumenin is a dedicated platform designed to
                 simplify pilgrimage planning for the Dawoodi Bohra community. It
                 offers detailed itineraries, route optimizations, and real-time
                 updates for visiting mazars and religious landmarks.

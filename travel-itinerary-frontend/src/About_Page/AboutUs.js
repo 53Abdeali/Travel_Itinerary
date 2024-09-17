@@ -179,7 +179,7 @@ function AboutUs() {
               What is the mission and objective of the platform?
             </h2>
             <p className="animate-on-scroll">
-              The Rehlat_ul_Mumenin project aims to bridge the gap
+              The Rehlat-Ul-Mumenin project aims to bridge the gap
               by offering a platform that not only helps Zaereen plan their
               visits to major pilgrimage sites but also guides them to smaller,
               nearby sites of significance. The proposed solution includes

@@ -1,4 +1,11 @@
 /* Main Loader Container */
+@font-face {
+  font-family: "Layla Thuluth";
+  src: url("./LaylaThuluth Regular.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
 .welcome-loader {
     display: flex;
     align-items: center;
@@ -17,6 +24,7 @@
     color: #3a5a40;
     position: relative;
     transition: 0.5s ease-in-out;
+    font-family: "Layla Thuluth";
   }
   
   /* Underline Animation */

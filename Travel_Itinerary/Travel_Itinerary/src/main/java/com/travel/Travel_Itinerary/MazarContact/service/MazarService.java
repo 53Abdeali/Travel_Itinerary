@@ -24,6 +24,9 @@ public class MazarService {
     public List<MazarContact> getMazarsByVisited(String visited) {
         return mazarRepo.findByVisitedContainingIgnoreCase(visited);
     }
+    public MazarContact getMazarsImage(String image) {
+        return mazarRepo.findByImage(image);
+    }
 
     public List<MazarContact> searchMazarsByName(String name) {
         return mazarRepo.findByNameContainingIgnoreCase(name);
