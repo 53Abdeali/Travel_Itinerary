@@ -14,7 +14,7 @@ function AllDest() {
   const fetchMazars = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.181.65:8082/api/mazars/all"
+        "http://192.168.64.65:8082/api/mazars/all"
       );
       setMazars(response.data);
     } catch (error) {
@@ -25,7 +25,7 @@ function AllDest() {
   const fetchMazarsByName = async (name) => {
     try {
       const response = await axios.get(
-        `http://192.168.181.65:8082/api/mazars/search?name=${encodeURIComponent(
+        `http://192.168.64.65:8082/api/mazars/search?name=${encodeURIComponent(
           name
         )}`
       );
@@ -38,7 +38,7 @@ function AllDest() {
   const fetchMazarsByCity = async (city) => {
     try {
       const response = await axios.get(
-        `http://192.168.181.65:8082/api/mazars/searchByCity?city=${encodeURIComponent(
+        `http://192.168.64.65:8082/api/mazars/searchByCity?city=${encodeURIComponent(
           city
         )}`
       );

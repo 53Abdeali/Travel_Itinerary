@@ -13,6 +13,7 @@ import ContactUs from "../Contact_Page/ContactUs";
 import Explore from "../ExploreDestination/explore";
 import AllDest from "../ExploreDestination/AllDest";
 import MazarDetails from "../ExploreDestination/MazarDetails";
+import Journey from "../Journey/Journey";
 
 function Home() {
   return (
@@ -36,6 +37,7 @@ function All() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />}/>
           <Route path="/explore" element={<Explore />}/>
+          <Route path="/journey" element={<Journey />}/>
           <Route path="/allDestination" element={<AllDest />}/>
           <Route path="/mazars/:mazarName/:city" element={<MazarDetails />} />
         </Routes>

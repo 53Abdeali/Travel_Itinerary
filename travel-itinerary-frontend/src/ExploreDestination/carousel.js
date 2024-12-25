@@ -13,7 +13,7 @@ function Carousel({ mazar, city }) {
   const fetchMazars = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.181.65:8082/api/mazars/all"
+        "http://192.168.64.65:8082/api/mazars/all"
       );
       const validMazars = response.data.filter((mazar) => mazar.image);
       setMazars(validMazars);

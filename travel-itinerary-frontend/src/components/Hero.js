@@ -77,7 +77,7 @@ function Hero() {
         <div className='call-to-action'>
           <ul>
             <li><a href='/'>Login / Register</a></li>
-            <li><a href='/'>Explore Destinations</a></li>
+            <li><a href='/explore'>Explore Destinations</a></li>
           </ul>
         </div>
       </div>

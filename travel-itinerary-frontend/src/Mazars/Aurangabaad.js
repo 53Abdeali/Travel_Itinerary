@@ -19,7 +19,7 @@ function Aurangabaad() {
     const fetchImageUrl = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.181.65:8082/api/mazars/all"
+          "http://192.168.64.65:8082/api/mazars/all"
         );
         setMazar(response.data); // Set the image URL
       } catch (error) {
