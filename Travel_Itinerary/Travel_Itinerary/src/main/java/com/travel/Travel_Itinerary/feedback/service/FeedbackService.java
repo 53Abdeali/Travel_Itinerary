@@ -14,7 +14,7 @@ public class FeedbackService {
 
     public void sendFeedback(Feedback feedback) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("aliabdealifakhri53@gmail.com"); 
+        message.setTo("rehlatulmumenin@gmail.com"); 
         message.setSubject("Bohra Itinerary Feedback from " + feedback.getName());
         message.setText("Name: " + feedback.getName() + "\n\nPhone: " + feedback.getPhone() + 
                         "\n\nITS ID: " + feedback.getItsId() + "\n\n" + feedback.getMessage());
