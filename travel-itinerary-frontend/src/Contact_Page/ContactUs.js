@@ -171,7 +171,7 @@ function ContactUs() {
       return;
     } else {
       try {
-        await axios.post("/api/contact", formData);
+        await axios.post("https://travel-itinerary-wc37.onrender.com/api/contact", formData);
         alert("Message sent succesfully!");
         setFormSubmitted(true);
         setFormData({ name: "", itsId: "", phone: "", message: "" });
@@ -212,7 +212,7 @@ function ContactUs() {
   const fetchMazarsByName = async (name) => {
     try {
       const response = await axios.get(
-        `http://192.168.64.65:8082/api/mazars/search?name=${encodeURIComponent(
+        `https://travel-itinerary-wc37.onrender.com/api/mazars/search?name=${encodeURIComponent(
           name
         )}`
       );
@@ -225,7 +225,7 @@ function ContactUs() {
   const fetchMazarsByCity = async (city) => {
     try {
       const response = await axios.get(
-        `http://192.168.64.65:8082/api/mazars/searchByCity?city=${encodeURIComponent(
+        `https://travel-itinerary-wc37.onrender.com/api/mazars/searchByCity?city=${encodeURIComponent(
           city
         )}`
       );

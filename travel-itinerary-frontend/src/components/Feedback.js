@@ -24,7 +24,7 @@ const FeedbackForm = () => {
       event.stopPropagation();
     } else {
       try {
-        await axios.post("/api/feedback", formData);
+        await axios.post("https://travel-itinerary-wc37.onrender.com/api/feedback", formData);
         alert("Feedback sent successfully");
       } catch (error) {
         console.error("Error sending feedback:", error);

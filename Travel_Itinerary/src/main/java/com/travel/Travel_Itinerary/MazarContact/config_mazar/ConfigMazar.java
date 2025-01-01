@@ -14,7 +14,7 @@ public class ConfigMazar {
             @Override
             public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://rehlatulmumenin.netlify.app/")
+                        .allowedOrigins("https://rehlatulmumenin.netlify.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
