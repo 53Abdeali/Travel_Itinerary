@@ -1,0 +1,15 @@
+com\travel\Travel_Itinerary\MazarContact\config_mazar\ConfigMazar.class
+com\travel\Travel_Itinerary\MazarContact\config_mazar\ConfigMazar$1.class
+com\travel\Travel_Itinerary\feedback\controller\FeedbackController.class
+com\travel\Travel_Itinerary\cont\contConfig\ContConfig.class
+com\travel\Travel_Itinerary\cont\contController\contController.class
+com\travel\Travel_Itinerary\MazarContact\service\MazarService.class
+com\travel\Travel_Itinerary\feedback\model\Feedback.class
+com\travel\Travel_Itinerary\MazarContact\entity\MazarContact.class
+com\travel\Travel_Itinerary\cont\contModel\contModel.class
+com\travel\Travel_Itinerary\cont\contService\contService.class
+com\travel\Travel_Itinerary\feedback\config\WebConfig.class
+com\travel\Travel_Itinerary\feedback\service\FeedbackService.class
+com\travel\Travel_Itinerary\TravelItineraryApplication.class
+com\travel\Travel_Itinerary\MazarContact\repository\MazarRepo.class
+com\travel\Travel_Itinerary\MazarContact\controller\MazarController.class
