@@ -1,20 +1,12 @@
-# Use a lightweight Java runtime as the base image
-FROM openjdk:17-jdk-slim
-
-# Set the working directory
+# Stage 1: Build the application
+FROM maven:3.8-openjdk-17 AS builder
 WORKDIR /app
-
-# Copy the Maven build files
 COPY . .
+RUN mvn clean package -DskipTests
 
-# Build the JAR file using Maven
-RUN ./mvnw clean package
-
-# Copy the built JAR file into the container
-COPY target/Travel_Itinerary-0.0.1-SNAPSHOT.jar app.jar
-
-# Expose the port your app runs on
+# Stage 2: Run the application
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=builder /app/target/Travel_Itinerary-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-
-# Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
