@@ -10,6 +10,6 @@ public class ContConfig implements WebMvcConfigurer {
     @SuppressWarnings("null")
     @Override
     public void addCorsMappings(CorsRegistry corsRegistry){
-        corsRegistry.addMapping("/**").allowedOrigins("http://localhost:3000","http://localhost/","http://192.168.181.65:3000").allowedMethods("*").allowedHeaders("*");
+        corsRegistry.addMapping("/**").allowedOrigins("https://rehlatulmumenin.netlify.app/").allowedMethods("*").allowedHeaders("*");
     }
 }

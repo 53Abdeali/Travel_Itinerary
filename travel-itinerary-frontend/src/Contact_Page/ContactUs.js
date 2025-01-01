@@ -201,7 +201,7 @@ function ContactUs() {
   const fetchMazars = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.64.65:8082/api/mazars/all"
+        "https://travel-itinerary-wc37.onrender.com/api/mazars/all"
       );
       setMazars(response.data);
     } catch (error) {

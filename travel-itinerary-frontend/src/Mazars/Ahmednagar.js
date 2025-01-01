@@ -19,7 +19,7 @@ function Ahmednagar() {
     const fetchImageUrl = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.64.65:8082/api/mazars/all"
+          "https://travel-itinerary-wc37.onrender.com/api/mazars/all"
         );
         setMazar(response.data); // Set the image URL
       } catch (error) {

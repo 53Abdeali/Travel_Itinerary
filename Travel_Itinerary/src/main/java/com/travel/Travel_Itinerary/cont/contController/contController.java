@@ -13,7 +13,7 @@ import com.travel.Travel_Itinerary.cont.contModel.contModel;
 import com.travel.Travel_Itinerary.cont.contService.contService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("https://travel-itinerary-wc37.onrender.com/api")
 public class contController {
 
     @Autowired
