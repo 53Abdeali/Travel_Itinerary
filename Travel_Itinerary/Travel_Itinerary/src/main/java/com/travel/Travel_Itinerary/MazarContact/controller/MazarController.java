@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/mazars")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://rehlatulmumenin.netlify.app/")
 public class MazarController {
 
     @Autowired
