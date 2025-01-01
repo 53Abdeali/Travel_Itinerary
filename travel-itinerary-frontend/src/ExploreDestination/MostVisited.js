@@ -14,7 +14,7 @@ function MostVisited() {
   const fetchMazarsByVisited = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.64.65:8082/api/mazars/visited"
+        "https://travel-itinerary-wc37.onrender.com/api/mazars/visited"
       );
       setMazars(response.data);
     } catch (error) {

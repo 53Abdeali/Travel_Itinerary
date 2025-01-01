@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("https://travel-itinerary-wc37.onrender.com/api/mazars")
+@RequestMapping("/api/mazars")
 @CrossOrigin(origins = "https://rehlatulmumenin.netlify.app/")
 public class MazarController {
 
