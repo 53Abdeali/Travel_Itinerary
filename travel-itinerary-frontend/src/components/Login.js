@@ -54,17 +54,17 @@ function Login() {
 
   return (
     <div className="main-log">
-      <div className="images">
+      {/* <div className="images">
         <img className="login-img" src={web} alt="Login" />
-      </div>
+      </div> */}
       <div className="setup">
         {/* <div className="img-vec">
           <img className="vector" src={seven} alt="Vector" />
         </div> */}
         <div className="login">
           <div className="login-heads">
-            <h2>Welcome to JavaZ</h2>
-            <h4>Please sign-in to your account and start the coding.</h4>
+            <h2>Welcome to Rehlat-Ul-Mumenin</h2>
+            <h4>Please sign-in to your account and start the exploring or plan a journey.</h4>
           </div>
           <div className="log-form">
             <form className="log-form" onSubmit={handleLogin}>
