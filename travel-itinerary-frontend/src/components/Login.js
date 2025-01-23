@@ -52,56 +52,49 @@ function Login() {
   };
 
   return (
-    <div className="main-log">
-      {/* <div className="images">
-        <img className="login-img" src={web} alt="Login" />
-      </div> */}
-      <div className="setup">
-        {/* <div className="img-vec">
-          <img className="vector" src={seven} alt="Vector" />
-        </div> */}
-        <div className="login">
-          <div className="login-heads">
-            <h2>Welcome to Rehlat-Ul-Mumenin</h2>
-            <h4>Please sign-in to your account and start the exploring or plan a journey.</h4>
+    <div className="setup">
+      <div className="login-heads">
+        <h2>Welcome to Rehlat-Ul-Mumenin</h2>
+        <h4>
+          Please sign-in to your account and start the exploring or plan a
+          journey.
+        </h4>
+      </div>
+      <div className="log-form">
+        <form className="log-form" onSubmit={handleLogin}>
+          <label htmlFor="Login">Username</label>
+          <div className="username">
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
           </div>
-          <div className="log-form">
-            <form className="log-form" onSubmit={handleLogin}>
-              <label htmlFor="Login">Username</label>
-              <div className="username">
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
-              </div>
-              <label htmlFor="Login">Password</label>
-              <div className="pass-cont">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-                <span
-                  className="toggle-password"
-                  onClick={() => setShowPassword(!showPassword)}
-                >
-                  <FontAwesomeIcon
-                    className="icon"
-                    icon={showPassword ? faEyeSlash : faEye}
-                  />
-                </span>
-              </div>
-              <button type="submit">Login</button>
-              <Link className="to-reg" to="/register">
-                {" "}
-                Don't have an account? Register
-              </Link>
-            </form>
+          <label htmlFor="Login">Password</label>
+          <div className="pass-cont">
+            <input
+              type={showPassword ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              <FontAwesomeIcon
+                className="icon"
+                icon={showPassword ? faEyeSlash : faEye}
+              />
+            </span>
           </div>
-        </div>
+          <button type="submit">Login</button>
+          <Link className="to-reg" to="/register">
+            {" "}
+            Don't have an account? Register
+          </Link>
+        </form>
       </div>
     </div>
   );
