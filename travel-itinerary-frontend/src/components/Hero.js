@@ -76,7 +76,7 @@ function Hero() {
         <p>Journey with Mumineen, Return with Peace & Barakat.</p>
         <div className='call-to-action'>
           <ul>
-            <li><a href='/'>Login / Register</a></li>
+            <li><a href='/login'>Login / Register</a></li>
             <li><a href='/explore'>Explore Destinations</a></li>
           </ul>
         </div>

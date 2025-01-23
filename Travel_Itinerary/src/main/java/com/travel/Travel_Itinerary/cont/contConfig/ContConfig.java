@@ -9,7 +9,8 @@ public class ContConfig implements WebMvcConfigurer {
 
     @SuppressWarnings("null")
     @Override
-    public void addCorsMappings(CorsRegistry corsRegistry){
-        corsRegistry.addMapping("/**").allowedOrigins("https://rehlatulmumenin.netlify.app").allowedMethods("*").allowedHeaders("*");
+    public void addCorsMappings(CorsRegistry corsRegistry) {
+        corsRegistry.addMapping("/**").allowedOrigins("https://rehlatulmumenin.netlify.app").allowedMethods("*")
+                .allowedHeaders("*");
     }
 }
