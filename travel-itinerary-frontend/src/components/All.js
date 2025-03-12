@@ -14,7 +14,6 @@ import Explore from "../ExploreDestination/explore";
 import AllDest from "../ExploreDestination/AllDest";
 import MazarDetails from "../ExploreDestination/MazarDetails";
 import Journey from "../Journey/Journey";
-import Login from "./Login";
 
 function Home() {
   return (
@@ -35,7 +34,6 @@ function All() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />}/>
           <Route path="/explore" element={<Explore />}/>
